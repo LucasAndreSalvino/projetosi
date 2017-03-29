@@ -1,0 +1,5 @@
+<div ng-include="'../../components/sidenav/sidenav.html'"></div>
+
+<div style="position: absolute; left: 40%; bottom: 50%">
+	<h1>Saldo: {{user.balanceCreditor - user.balanceDebtor | currency:"R$"}}</h1>
+</div>

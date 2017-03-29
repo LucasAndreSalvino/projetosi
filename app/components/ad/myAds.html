@@ -1,0 +1,12 @@
+<div ng-include="'../../components/sidenav/sidenav.html'"></div>
+<div style="margin: 4% 4% 4% 4%">
+
+    <h1 style="position: absolute; left: 40%" ng-show="user.ads.length === 0">Você não possui anúncios!</h1>
+	<div  class="card" ng-repeat="ad in user.ads">
+  		<div style="background-color: black; color: white; padding-left: 2%" class="card-block">
+    		<h3 class="card-title">{{ad.title}}</h3>
+    		<h4 class="card-subtitle">{{ad.value | currency:'R$'}}</h4>
+    		<h6 class="card-text">{{ad.description}}</h6>
+  		</div>
+	</div>
+</div>

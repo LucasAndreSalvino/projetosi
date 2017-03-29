@@ -1,0 +1,14 @@
+<div style="height: 100%" class="container" ng-controller="sidenav-controller">
+    <div class="sidebar" sidebar-directive="state">
+        <md-button id="navigation-toggle" style="color: white; background-color: transparent" class="md-icon-button" ng-click="toggleState()">
+            <i class="material-icons" style="color: black">menu</i>
+        </md-button>
+        <ul class="navigation">
+            <li class="navigation-items" ui-sref="dashboard"><a> Dashboard</a> </li>
+            <li class="navigation-items" ui-sref="createAd"><a> Criar Anúncio </a></li>
+            <li class="navigation-items" ui-sref="myAds"><a>Meus Anúncios </a></li>
+            <li class="navigation-items" ui-sref="allAds"><a> Anúncios</a> </li>
+            <li class="navigation-items" ng-click="logout()"><a>Sair</a> </li>
+        </ul>
+    </div>
+</div>

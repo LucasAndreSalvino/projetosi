@@ -1,0 +1,41 @@
+
+<div ng-include="'../../components/sidenav/sidenav.html'"></div>
+<div style="padding: 3% 3% 3% 3%; position: absolute; left: 40%;">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="col-md-2 control-label">Tipo</label>
+                <div class="col-md-6">
+                    <input id="descricao" ng-model="adType" type="text" placeholder="Tipo" class="form-control input-md" required="required"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="col-md-2 control-label">Data</label>
+                <div class="col-md-8">
+                    <input ng-model="date" type="text" placeholder="dd/mm/year" class="form-control input-md" required="required"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <md-card ng-show="(ad.advertiser.id !== user.id) && showAd(ad)" style="background-color: #1b6d85; color: white; width: 400px" ng-repeat="ad in allAds">
+        <md-card-title>
+            <md-card-title-text class="md-headline">
+                {{ad.title}}
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <p><span>{{ad.value | currency:"R$"}}</span></p>
+            <span>{{ad.description}}</span>
+        </md-card-content>
+
+        <md-card-actions>
+            <button ng-click="buyAd(ad)" class="btn btn-default">Comprar</button>
+        </md-card-actions>
+    </md-card>
+
+</div>

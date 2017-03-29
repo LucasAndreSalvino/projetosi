@@ -1,0 +1,55 @@
+<div id="menu" class="navbar navbar-default " role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand" th:href="@{/}"><i class="fa fa-usd" aria-hidden="true"></i> Pub-ad</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+            <!--
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/products">Products</a>
+                </li>
+                <li>
+                    <a href="/about-us">About Us</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact Us</a>
+                </li>
+            </ul>
+            -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a ui-sref="signup"><i class="fa fa-user-plus" aria-hidden="true"></i> Cadastra-se</a>
+                </li>
+                <li>
+                    <a ui-sref="login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- end menu -->
+<div class="container-fluid">
+    <div class="row">
+        <th:block layout:fragment="conteudo"/>
+    </div>
+</div>
+<!-- init footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="logo"></div>
+        <p class="text-muted">© 2017 | Todos os Direitos Reservados | <i class="fa fa-usd" aria-hidden="true"></i> pub-ad</p>
+    </div>
+</footer>
+<!-- end footer -->
+<script th:src="@{/webjars/jquery/1.12.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/3.3.5/js/bootstrap.min.js}" ></script>
+<th:block layout:fragment="js-extra"></th:block>

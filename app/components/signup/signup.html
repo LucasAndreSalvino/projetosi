@@ -1,0 +1,54 @@
+<div class="col-md-offset-2 col-md-8">
+        <!-- init form cadastro -->
+        <form class="form-horizontal">
+            <fieldset>
+                <!-- Form Name -->
+                <legend>Cadastro</legend>
+                <!-- Nome -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="nome">Nome</label>
+                    <div class="col-md-4">
+                        <input id="nome" ng-model="name" type="text" placeholder="Nome" class="form-control input-md" required="required"/>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="email">Email</label>
+                    <div class="col-md-4">
+                        <input id="email" ng-model="email" type="email" placeholder="Email" class="form-control input-md" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+                    </div>
+                </div>
+                <!-- Senha input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="senha">Senha</label>
+                    <div class="col-md-4">
+                        <input id="senha" ng-model="senha" type="password" placeholder="Senha" minlength="1" maxlength="16" class="form-control input-md" required="required"/>
+                    </div>
+                </div>
+                <!-- Confirmar Senha input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="confirmpassword">Confirmar Senha</label>
+                    <div class="col-md-4">
+                        <input id="confirmpassword" ng-model="confirmSenha" type="password" placeholder="Confirmar Senha" minlength="4" maxlength="16" class="form-control input-md"/>
+                    </div>
+                </div>
+                <!-- Multiple Radios (inline) -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Razão Social</label>
+                    <select ng-model="tipoUsuario">
+                        <option value="FISICA" >Pessoa Fisica</option>
+                        <option value="JURIDICA">Pessoa Juridica</option>
+                    </select>
+                </div>
+                <!-- Button (Double) -->
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-4">
+                        <button id="cadastrar-se" name="button1id" class="btn btn-success" ng-click="signUp()">Cadastrar-se</button>
+                        <button id="reset" name="reset" class="btn btn-danger" type="reset">Limpar</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <!-- end form cadastro -->
+    </div>
+</html>

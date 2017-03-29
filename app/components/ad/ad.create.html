@@ -1,0 +1,58 @@
+<div layout="column" style="padding-top: 3%">
+
+	<fieldset layout="column" class="form-horizontal">
+        <h1 style="padding-left: 30%; padding-bottom: 3%">Criar Anúncio</h1>
+		<div class="form-group">
+            <label class="col-md-4 control-label">Título</label>
+            <div class="col-md-4">
+                <input id="titulo" ng-model="titulo" type="text" placeholder="Título" class="form-control input-md" required="required"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">Descrição</label>
+            <div class="col-md-4">
+                <input id="descricao" ng-model="descricao" type="text" placeholder="Descrição" class="form-control input-md" required="required"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">Categoria</label>
+
+            <select ng-model="categoria" class="select">
+                <option value="EMPREGO" ng-show="user.tipoUsuario==='JURIDICA'">Emprego</option>
+                <option value="SERVICO" ng-show="user.tipoUsuario==='JURIDICA'">Servico</option>
+                <option value="MOVEL">Móvel</option>
+                <option value="IMOVEL">Imóvel</option>
+            </select>
+        </div>
+
+        <div ng-show="categoria === 'MOVEL' || categoria === 'IMOVEL'" class="form-group">
+            <label class="col-md-4 control-label" for="price">Preço</label>
+            <div class="col-md-4">
+                <input id="valor" ng-model="valor" type="text" placeholder="0.00" class="form-control input-md" required="required"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">Data Criação</label>
+            <div class="col-md-4">
+                <input id="descricao" ng-model="dataCriacao" type="text" placeholder="dd/mm/year" class="form-control input-md" required="required"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="description">Data Finalização</label>
+            <div class="col-md-4">
+                <input id="descricao" ng-model="dataFinalizacao" type="text" placeholder="dd/mm/year" class="form-control input-md" required="required"/>
+            </div>
+        </div>
+
+        <div style="padding-left: 40%" class="form-group">
+        	<button id="criar"  name="button1id" class="btn btn-success" ng-click="createAd()">Criar Anúncio</button>
+        </div>
+        <div style="padding-left: 40%" class="form-group">
+            <button id="criar"  name="button1id" class="btn btn-danger" ui-sref="dashboard">Voltar</button>
+        </div>
+	</fieldset>
+</div>
